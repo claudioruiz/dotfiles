@@ -1,0 +1,21 @@
+
+# sidebar
+bind index,pager \CP     sidebar-prev
+bind index,pager \CN     sidebar-next
+bind index,pager \CO     sidebar-open
+
+macro index,pager \Cw    ":set from=luciano@fiandes.io"
+macro index,pager \Ca    ":set from=info@lucianofiandesio.comç"
+
+bind index l display-message
+bind index gg first-entry
+bind index G last-entry
+macro index   <tab>      <next-unread><enter>
+
+#bind pager h exit
+bind pager gg top
+bind pager G bottom
+bind pager J next-line
+bind pager K previous-line
+
+# vim: filetype=muttrc

@@ -1,0 +1,17 @@
+#
+# Mailboxes to monitor for mail
+# (arranged in urgency reading order)
+#
+mailboxes "+-- luciano ------------" \
+          imaps://$my_server/INBOX \
+          "imaps://$my_server/INBOX.Sent Items" \
+          "imaps://$my_server/INBOX.Drafts" \
+          "+-- folders ------------" \
+          "imaps://$my_server/INBOX.work._ubs" \
+          imaps://$my_server/INBOX.receipt \
+          imaps://$my_server/INBOX.receipt.android \
+          "imaps://$my_server/INBOX.Laura" \
+          "imaps://$my_server/INBOX.family" \
+          "imaps://$my_server/INBOX.friends" \
+          "imaps://$my_server/INBOX.travel" \
+          "imaps://$my_server/INBOX.zurich" \

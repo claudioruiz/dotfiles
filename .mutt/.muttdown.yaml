@@ -1,0 +1,5 @@
+smtp_host: mail.messagingengine.com
+smtp_port: 587
+smtp_ssl: false
+smtp_username: lfi@fastmail.fm
+smtp_password_command: security find-internet-password -w -a lfi@fastmail.fm
