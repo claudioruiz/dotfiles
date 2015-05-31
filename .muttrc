@@ -49,6 +49,8 @@ source ~/.mutt/mailboxes.muttrc
 source ~/.mutt/headers.muttrc
 source ~/.mutt/bindings.muttrc
 source ~/.mutt/sidebar.muttrc
+source ~/.mutt/crypto.muttrc
+
 
 # colors
 

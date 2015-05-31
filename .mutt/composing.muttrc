@@ -6,7 +6,7 @@
 
 set mime_forward 									# Forward message as MIME attachments.
 #set editor            = "vim +':set textwidth=76' +':set wrap' +/^$"
-set editor			   = "vim +/^$ ++1 -c 'set tw=76 expandtab nosmartindent'""
+set editor			   = "vim +/^$ ++1 -c 'set tw=76 expandtab nosmartindent spell'""
 set fast_reply           							# don't prompt for stuff when replying
 set include											# ... including original message
 set edit_headers 									# Allows editing of message headers
