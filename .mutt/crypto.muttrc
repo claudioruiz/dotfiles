@@ -9,7 +9,8 @@
 set crypt_use_gpgme=yes
 
 # Automatically sign all outgoing messages
-set crypt_autosign=yes
+# do not autosign
+# set crypt_autosign=yes
 
 # Automatically verify the sig of a message when opened
 set crypt_verify_sig=yes

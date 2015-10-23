@@ -230,15 +230,19 @@ cdf() {
 # zipf: to create a ZIP archive of a file or folder
 zipf () { zip -r "$1".zip "$1" ; }
 
+# Create a password and copy to clipboard
+function passwordgen() {
+   pwgen -Cs 20 1 | tr -d ' ' | tr -d '\n' | pbcopy
+}
 # Create a new basic Java project using Gradle
 function newp() {
-   mkdir -p "$@" && cd "$@" 
+   mkdir -p "$@" && cd "$@"
    gradle setupBuild --type java-library
    perl -i -lne 'print $_;print "apply plugin: \x27eclipse\x27" if(/apply/);' build.gradle
    gradle eclipse
    rm -fr src/main/java/Library.java
    rm -fr src/test/java/LibraryTest.java
-} 
+}
 
 # bookmark folders: http://d.pr/AP7P
 export MARKPATH=$HOME/.marks

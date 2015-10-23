@@ -19,13 +19,18 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/unite.vim'
 Plug 'scrooloose/syntastic'             " syntax checker
-Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
+Plug 'terryma/vim-expand-region'        " context-aware selection, like Intellij CTRL + W
+" Plug 'guns/vim-clojure-static'
+" Plug 'tpope/vim-fireplace'
+Plug 'bling/vim-airline'
+Plug 'pangloss/vim-javascript'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-markdown'
 
 call plug#end()
 
 " leader
-let mapleader=","
+let mapleader="\<Space>"
 
 " =============
 " Plugin config
@@ -91,7 +96,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -179,6 +184,16 @@ map <F4> :w<CR> :compiler gradle<CR> :make test<CR>:cw 4<CR>
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
+" fast save -> space + w
+nnoremap <Leader>w :w<CR>
+
+" fast enter visual mode
+nmap <Leader><Leader> V
+
+" select region with 'vim-expand-region'
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
 " highlight 81 chars (tip from Damian Conway)
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
@@ -209,6 +224,7 @@ if has("spell") " if vim support spell checking
   " spell checking for text, HTML, LaTeX, markdown and literate Haskell
   autocmd BufEnter *.txt,*.tex,*.html,*.md,*.ymd,*.lhs setlocal spell
   autocmd BufEnter *.txt,*.tex,*.html,*.md,*.ymd,*.lhs setlocal spelllang=en,it
+  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
   " better error highlighting with solarized
   highlight clear SpellBad
   highlight SpellBad term=standout ctermfg=2 term=underline cterm=underline
@@ -219,3 +235,10 @@ if has("spell") " if vim support spell checking
   highlight clear SpellLocal
   highlight SpellLocal term=underline cterm=underline
 endif
+
+" vim-airline config
+
+let g:airline_theme='powerlineish'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_section_z=''

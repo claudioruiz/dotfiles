@@ -48,10 +48,9 @@ if [ -f ~/.git-completion.sh ]; then
   . ~/.git-completion.sh
 fi
 
+# activate default virtualenv profile
 source /Users/luciano/Virtualenvs/default/bin/activate
 
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/luciano/.gvm/bin/gvm-init.sh" ]] && source "/Users/luciano/.gvm/bin/gvm-init.sh"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/luciano/.sdkman"
+[[ -s "/Users/luciano/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/luciano/.sdkman/bin/sdkman-init.sh"
