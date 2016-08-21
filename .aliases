@@ -160,3 +160,4 @@ alias tcpd8080="sudo tcpdump -s 0 -A -i lo0 'tcp port 8080 and (((ip[2:2] - ((ip
 alias brewup="brew update && brew upgrade --all && brew cleanup && brew cask cleanup"
 # beet
 alias bim="beet import"
+alias t="todo.sh"

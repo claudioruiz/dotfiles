@@ -1,11 +1,11 @@
 
-# sidebar
+# sidebar - next, previous, open
 bind index,pager \CP     sidebar-prev
 bind index,pager \CN     sidebar-next
 bind index,pager \CO     sidebar-open
 
 macro index,pager \Cw    ":set from=luciano@fiandes.io"
-macro index,pager \Ca    ":set from=info@lucianofiandesio.comç"
+macro index,pager \Ca    ":set from=info@lucianofiandesio.com"
 
 bind index l display-message
 bind index gg first-entry

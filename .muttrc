@@ -28,12 +28,11 @@ set imap_pass 		= $my_pass
 #set ssl_starttls 	= no
 set sendmail = "muttdown -c /Users/luciano/.mutt/.muttdown.yaml"
 
-
 #
 # Default inbox
 #
 set spoolfile=imaps://$my_server/INBOX
-
+set trash=imaps://$my_server/INBOX.Trash
 #
 # Default location of mailboxes
 #
@@ -42,7 +41,6 @@ set folder=imaps://$my_server/INBOX
 set query_command="pc_query -m '%s'"
 bind editor <Tab> complete-query
 
-
 source ~/.mutt/general.muttrc
 source ~/.mutt/composing.muttrc
 source ~/.mutt/mailboxes.muttrc
@@ -50,7 +48,6 @@ source ~/.mutt/headers.muttrc
 source ~/.mutt/bindings.muttrc
 source ~/.mutt/sidebar.muttrc
 source ~/.mutt/crypto.muttrc
-
 
 # colors
 
